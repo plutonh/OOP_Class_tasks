@@ -1,0 +1,63 @@
+You must answer at least 4 questions, but the remaining ones are optional. The main goal of this file is to get you thinking critically about your own work, but we will also use these self reflections at the end of the semester when we do our internal review of the course.
+
+ArrayDeque:
+
+Q: Give an example of at least one idea from the staff solution that would have made your solution better (if any).
+
+A: For the equals method, I simply checked only those that match a given variable and wrote to return true if they are equal or false if they are different. However, in the case of the TA's equals method, if the length is not the same in the process of copying the ArrayDeque to the temp, I can see that the code is implemented to operate more stably by returning false.
+
+Q: What's something you felt proud of in your code, if anything?
+
+A:
+
+Q: What's something that was particularly inelegant in your code, if anything?
+
+A: When adding a new item in the addlast method, if the array is full, it is implemented simply by doubling the size of the array. In this case, I think the unused allocated memory will increase, which will prevent efficient use of memory.
+
+Q: What did you learn by talking to your partner about writing ArrayDeque?
+
+A:
+
+Q: What do you wish you would have known before writing ArrayDeque, if anything?
+
+A: When implementing ArrayDeque, I should consider when I need to resize the array when I add or remove items. I can increase or decrease the size of an array one by one, or increase or decrease it significantly at a time, so it would be nice to learn in advance how to determine how efficient it is to increase or decrease the size each time I execute the resize method.
+
+Q: If you wrote ArrayDeque again, what would you do differently, if anything?
+
+A: The ArrayDeque class I wrote has a front instance representing the beginning of an array, a rear instance representing the end of an array, and a size instance representing the size of the array. For simplicity, I can subtract the front from the rear instance to see the size of the array. In this way, I think that two of the three instances alone can represent all the information that three instances have. Considering this, ArrayDeque can be implemented in a way that reduces the memory allocated to the instance.
+
+-----
+
+LinkedListDeque:
+
+Q: Give an example of at least one idea from the staff solution that would have made your solution better (if any).
+
+A: 
+
+Q: What's something you felt proud of in your code, if anything?
+
+A:
+
+Q: What's something that was particularly inelegant in your code, if anything?
+
+A: To create a getRecursive method of finding items for a specific index in a recursive way, I created an IntNode-type backup instance to temporarily store the current IntNode and wrote code to be automatically initialized in the constructor of LinkedListDeque. If the getRecursive method is not used, the backup node becomes an unnecessary instance, so it can be seen as a waste of memory, so I think there is a way to improve this problem.
+
+Q: What did you learn by talking to your partner about writing LinkedListDeque?
+
+A: In LinkedListDeque, I learned that there is a way to create and use objects more efficiently for the IntNode class I wrote. I also found that we created a separate instance to access the previous and subsequent nodes of the current node, in which case I could reduce memory usage by properly representing the prev, next instance without creating a separate instance.
+
+Q: What do you wish you would have known before writing LinkedListDeque, if anything?
+
+A: I think the Array method can be more intuitive than the LinkedList method in implementing the list, so array method can be much simpler. In spite of this inconvenience, if I understand the benefits of the LinkedList method compared to the Array method in advance, I will be able to understand the justification of learning the LinkedList method, which will motivate me to write code.
+
+Q: If you wrote LinkedListDeque again, what would you do differently, if anything?
+
+A: In the case of LinkedListDeque during this assignment, I wrote the code using the structure I learned in the data structure theory of the first semester of the second grade. In this object-oriented programming, I learned how to use the sentinel node, but I couldn't use this method because I couldn't accurately implement it. If I write LinkedListDeque again, I want to implement it using sentinel node.
+
+-----
+
+Meta:
+
+Q: Did you like this design review process? Anything we should do differently next time?
+
+A: Looking at the TA's solution, I could see what was lacking and what could be improved in the code I wrote. Apart from this peer code review, if the solution is uploaded after the submission of each assignment and practice is completed, the TA 's solution can be compared with the memory of the assignment maintained.  Because of this, I think I can understand what was lacking and what could be improved.
